@@ -1830,15 +1830,15 @@ conversation "pond strider"
 	
 	label branches
 	branch both
-		has "remnant blood test pure"
+		has "license: Remnant"
 		has "Coalition: First Contact: done"
 	branch knowRemnant
-		has "remnant blood test pure"
+		has "license: Remnant"
 	branch knowCoalition
 		has "Coalition: First Contact: done"
-	
 	choice
 		`	"No. I don't know of any species that could help."`
+	label stridernone
 	`	"This is unfortunate. But you are a resourceful being. Perhaps you could explore the galaxy for a group able to help us." The elders and Torsa continue to discuss for a short while longer, deciding that Torsa and his team should create a small number of new ships to defend Cloudfire while you go searching for hull repair technology to finish the ship.`
 		accept
 	
@@ -1848,14 +1848,20 @@ conversation "pond strider"
 			goto remnant
 		`	"There are a group of three alien species far from here known as the Coalition that have outfits able to repair a ship in flight."`
 			goto coalition
+		`	"No. I don't know of any species that could help."`
+			goto stridernone
 	label knowRemnant
 	choice
-		`	"A group of humans in an area of space known as the Ember Waste have ships that are able to repair themselves."`
+		`	"I know a reclusive group of humans who have ships that can repair themselves."`
 			goto remnant
+		`	"No. I don't know of any species that could help."`
+			goto stridernone
 	label knowCoalition
 	choice
 		`	"There are a group of three alien species far from here known as the Coalition that have outfits able to repair a ship in flight."`
 			goto coalition
+		`	"No. I don't know of any species that could help."`
+			goto stridernone
 			
 	label remnant
 	apply
@@ -1898,6 +1904,24 @@ mission "Strider: Coalition Hull Repair"
 				decline
 
 mission "Strider 2 (Remnant)"
+	landing
+	name "Contact the Remnant"
+	description "Take a message from the Hai to <destination> to attempt to obtain hull repair technology from the Remnant."
+	source "Hai-home"
+	destination "Aventine"
+	to offer
+		has "strider: remnant"
+	on offer
+		conversation
+			`You enter the spaceport and find a Hai delegation ready to travel to the Remnant to negotiate for the hull repair technology. The leader of the delegation introduces herself as Ambassador Yashili. "I wasn't sure how far we will be traveling, so I packed assuming we will be traveling a great distance across the galaxy."`
+			choice
+				`	"Wait a minute! This group doesn't react well to strangers. How about I setup a meeting first?"`
+				`	"This is a bad idea. Sorry, but I am backing out."`
+					decline
+			`	The Hai looking at each other and chatter quietly among themselves, then Ambassador Yashili speaks up. "You know this group, and how to make the best impression on them." She pauses to whisper to another Hai, who runs off. The ambassador turns back to you. "I will provide you with a letter with a brief introduction to us, an explanation of why we would like to meet them, and an invitation to establish diplomatic relations. Please bring us their reply."`
+			`	Moments later, the second Hai runs back into the spaceport carrying a sealed envelope.
+
+mission "Strider 3 (Remnant)"
 	landing
 	name "Contact the Remnant"
 	description "Transport Ambassador Yashili and her delegation to <destination> to attempt to obtain hull repair technology from the Remnant."
