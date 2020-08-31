@@ -551,6 +551,8 @@ mission "Unwanted Cargo Trigger"
 
 event "hai in cargo"
 
+
+
 mission "Unwanted Cargo"
 	landing
 	description "Bring a Hai child who hid in your cargo hold back to <destination>."
@@ -690,6 +692,8 @@ mission "Expanding Business [1]"
 	on complete
 		dialog `The freighters are ready to launch by the time you get to <planet>. "Now we just need to escort these freighters to Follower in the Alphard system and back in one piece," Turner exclaims, hopping back on to his Star Queen.`
 
+
+
 mission "Expanding Business [2]"
 	landing
 	name "An Interesting Proposition"
@@ -729,6 +733,8 @@ mission "Expanding Business [2]"
 	on visit
 		dialog `You've reached <planet>, but you've left one of the ships you're supposed to be escorting behind. Wait for Turner's ship and all the Bulk Freighters to arrive before landing.`
 
+
+
 mission "Expanding Business [3]"
 	landing
 	name "An Interesting Proposition"
@@ -751,6 +757,8 @@ mission "Expanding Business [3]"
 		
 	on visit
 		dialog `You've reached <planet>, but you've left Turner behind. Wait for Turner's ship to arrive before landing.`
+
+
 
 mission "Expanding Business [4]"
 	landing
@@ -787,6 +795,8 @@ event "outfitter on greenwater"
 		outfitter "Ammo North"
 		outfitter "Ammo South"
 
+
+
 mission "Expanding Business: outfitter complete"
 	landing
 	invisible
@@ -799,6 +809,8 @@ mission "Expanding Business: outfitter complete"
 
 event "request for a shipyard"
 
+
+
 mission "Expanding Business [5]"
 	landing
 	name "A New Proposition"
@@ -810,6 +822,8 @@ mission "Expanding Business [5]"
 		has "event: request for a shipyard"
 	on offer
 		dialog `You receive a message from David Turner when you land. "Hello, Captain. I hope you've been enjoying your share in the outfitter. I have a new proposition for you, as I've bought out the rest of the park around the outfitter. Meet me on <destination> if you'd like to hear about it."`
+
+
 
 mission "Expanding Business [6]"
 	landing
@@ -899,6 +913,8 @@ mission "Expanding Business [6]"
 
 	on complete
 		dialog `The Bulk Freighters are loaded with supplies without any problem. When one of the spaceport workers asks Turner where the supplies are going, he replies, "These are just to expand a business venture of mine on, uh, Glory."`
+
+
 
 mission "Expanding Business [7]"
 	landing
@@ -1130,6 +1146,8 @@ mission "Pirate Troubles [0]"
 				"Headhunter" 3
 				"Raven" 3
 
+
+
 mission "Pirate Troubles [1]"
 	landing
 	name "Unfettered Humans"
@@ -1174,6 +1192,8 @@ mission "Pirate Troubles [1]"
 			has "accepted scar's legion tribute"
 			has "defeated scar's legion"
 
+
+
 mission "Pirate Troubles [1]: Farpoint"
 	landing
 	invisible
@@ -1185,6 +1205,8 @@ mission "Pirate Troubles [1]: Farpoint"
 			`You visit the Navy outpost on <origin> and ask the officers there if they have any information on Scar's Legion. After running a background check on you to make sure you're not up to no good, an officer hands you a copy of a folder containing all the information that the Navy has on the gang. "Nothing in here is classified, so you're free to keep it," the officer says.`
 			`	You return to your ships and sift through the files. The leader of the gang is named Scar (to no one's surprise), who used to be an important member of another pirate gang before forming his own. The Navy estimates their numbers to be in the low thousands, mostly responsible for petty crime in the Far North and not a cause of too much trouble, but the files all date back to a number of years ago. Clearly something has changed in the time since these files were last updated if Scar's Legion is now powerful enough to even attempt to attack the Hai.`
 				decline
+
+
 
 mission "Pirate Troubles [1]: Freedom or Zenith"
 	landing
@@ -1198,6 +1220,8 @@ mission "Pirate Troubles [1]: Freedom or Zenith"
 		conversation
 			`You wander the <origin> spaceport on the lookout for anyone who might have any information on the whereabouts of Scar's Legion. A self-described fixer promises you information in exchange for payment, but after handing her the few credits that she's asking for, she runs off with her gun in her hands to discourage you from following. Perhaps someone on another nearby pirate planet will have actual information for you.`
 				decline
+
+
 
 mission "Pirate Troubles [1]: Haven"
 	landing
@@ -1213,6 +1237,8 @@ mission "Pirate Troubles [1]: Haven"
 			`	You leave the bar after an hour or two. Once you return to your ship, you write down all the information you can remember. The gang use to operate exclusively out of the Far North until they crossed one of the larger gangs, causing them to flee the region a few years ago. One of the pirates guesses that they fled for the Core.`
 			`	Another person mentioned that the leader of the gang used to always talk about making their own base in an uninhabited system where no one would find it. "He always talked about hollowing out an asteroid to use as a hideout. My guess is he was just always high on the ringworld shavings his gang was dealing."`
 				decline
+
+
 
 mission "Pirate Troubles [1]: Stormhold"
 	landing
@@ -1274,6 +1300,8 @@ planet "Scar's Hideout"
 	security 0
 	government "Scar's Legion"
 
+
+
 mission "Pirate Troubles [2]"
 	landing
 	name "Scar's Legion"
@@ -1327,6 +1355,8 @@ event "battle against scar's legion over"
 		fleet "Large Northern Pirates" 16000
 		fleet "Large Republic" 30000
 		fleet "Human Miners" 1600
+
+
 
 mission "Pirate Troubles [3]"
 	landing
@@ -1417,6 +1447,8 @@ mission "Pirate Troubles [3]"
 	on complete
 		set "defeated scar's legion"
 		event "battle against scar's legion over"
+
+
 
 mission "Pirate Troubles [4]"
 	landing
@@ -1553,6 +1585,8 @@ mission "Nanachi 1"
 			`	"Just give me an hour or two to explore. Back home our shipyard is kind of small. I've never really gotten a chance to see a Shield Beetle up close, and there are many undergoing repairs here. I'll just go get a better look at them, I swear I'll be quick."`
 			`	You two agree to meet in the spaceport in a few hours; maybe this time she will do fine on her own.`
 
+
+
 mission "Nanachi 2"
 	name "Escort Nanachi to <planet>"
 	description "Bring Nanachi and her passengers to <destination>."
@@ -1583,6 +1617,8 @@ mission "Nanachi 2"
 			`You help the family gather all their luggage and bid them farewell, but right as they disappear into a hallway Nanachi lets out a heavy sigh. "I bit off more than I could chew. Those kids kept wanting to play with the ship's controls, and one of them tried to go up the air vent in a game of hide-and-seek. I couldn't get any rest since I had to keep making sure they weren't about to dump their own bags into the void by accident."`
 			`	"Do you want to get some sleep before trying to find another mission?" you ask, hoping she won't try to overwork herself.`
 			`	"Yes, I could really use that. Sorry to make you wait again Captain <last>. I'll rest a bit, see if I can't find a spot nearby to relax, and meet up with you in the spaceport after a while."`
+
+
 
 mission "Nanachi 3"
 	name "Deliver spices with Nanachi"
@@ -1654,6 +1690,8 @@ mission "Nanachi 3"
 		conversation
 			`Allhome's docking area shows much more traffic than usual. Many captains here are helping workers open cargo containers full of food, clothes, books, movies and even some mounted animals from human space. You finally meet up with the festival's organizers, who seem very excited to have acquired the exotic condiments, and have invited you two to a bar in the spaceport for a drink.`
 
+
+
 mission "Nanachi 4"
 	name "Protect Nanachi"
 	description "Bring Nanachi's ship to <stopovers>, keeping her safe from a pirate fleet that attacked a convoy heading to Hai space, then head back to <destination> by <date>."
@@ -1711,6 +1749,8 @@ mission "Nanachi 4"
 
 event "Nanachi: payment"
 
+
+
 mission "Nanachi: Payment"
 	landing
 	source
@@ -1726,6 +1766,8 @@ mission "Nanachi: Payment"
 				decline
 
 event "Nanachi: Update"
+
+
 
 mission "Nanachi Meeting"
 	landing
@@ -1778,6 +1820,8 @@ event "pond strider released"
 			"Flea (Pulse)" 8
 			"Flea" 8
 			"Centipede"
+
+
 
 mission "Strider 1"
 	landing
@@ -1877,6 +1921,8 @@ conversation "pond strider"
 	`	The elders and Torsa continue to discuss for a short while longer, deciding that Torsa and his team should create a small number of new ships to defend Cloudfire while you travel to acquire hull repair technology to finish the ship. "We will put together a delegation for you to transport to these people you mention. They will be waiting in the spaceport shortly."`
 		decline
 
+
+
 mission "Strider: Remnant Hull Repair"
 	landing
 	source
@@ -1889,6 +1935,8 @@ mission "Strider: Remnant Hull Repair"
 		conversation
 			`You enter the Remnant shipyard here and begin speaking with the shipwright about Remnant ships. One of the aspects of Remnant ships that the shipwright mentions to you is that they are able to repair their own hull. You should return to Hai-home and inform the Hai about this technology.`
 				decline
+
+
 
 mission "Strider: Coalition Hull Repair"
 	landing
@@ -1903,12 +1951,15 @@ mission "Strider: Coalition Hull Repair"
 			`While looking at the outfits that the Coalition have for sale, the hull repair module catches your eye. It uses a small robot to repair the hull of a ship while in flight. You should return to Hai-home and inform the Hai about this technology.`
 				decline
 
+
+
 mission "Strider 2 (Remnant)"
 	landing
 	name "Contact the Remnant"
-	description "Take a message from the Hai to <destination> to attempt to obtain hull repair technology from the Remnant."
+	description "Take a message from the Hai to <destination> to set up a meeting between the Remnant and the Hai."
 	source "Hai-home"
-	destination "Aventine"
+	stopover
+		government "Remnant"
 	to offer
 		has "strider: remnant"
 	on offer
@@ -1918,8 +1969,33 @@ mission "Strider 2 (Remnant)"
 				`	"Wait a minute! This group doesn't react well to strangers. How about I setup a meeting first?"`
 				`	"This is a bad idea. Sorry, but I am backing out."`
 					decline
-			`	The Hai looking at each other and chatter quietly among themselves, then Ambassador Yashili speaks up. "You know this group, and how to make the best impression on them." She pauses to whisper to another Hai, who runs off. The ambassador turns back to you. "I will provide you with a letter with a brief introduction to us, an explanation of why we would like to meet them, and an invitation to establish diplomatic relations. Please bring us their reply."`
-			`	Moments later, the second Hai runs back into the spaceport carrying a sealed envelope.
+			`	The Hai looking at each other and chatter quietly among themselves, then Ambassador Yashili speaks up. "You know this group, and how to make the best impression on them." She pauses to whisper to another Hai, who runs off. The ambassador turns back to you. "I will provide you with a letter with a brief introduction to us, an explanation of why we would like to meet them, and an invitation to establish diplomatic relations."`
+			`	Moments later, the second Hai runs back into the spaceport carrying a sealed envelope and hands it to the Ambassador. She turns to you. "Here it is. Please take this to these reclusive humans for us."`
+				accept
+	on stopover
+		conversation
+			`Looking around the spaceport, you are not sure who to talk to about such a request. Eventually you go to the starport information desk to ask them. After a few minutes they tell you that someone will meet with you, and invite you to wait in the cafeteria.`
+			`	After an hour of watching Remnant eating and gesturing to each other, an androgynous Remnant approaches your table. You try to decide what age they are, but while they do not seem young, neither do they seem particularly old.`
+			branch signlanguage
+				has "Remnant: Learn Sign Follow Up: offered"
+			`	"Greetings, Captain <first>." The stranger chants. "My name is Rayn, and my colleague said you had a request from another faction?"`
+				goto stridercontinue
+			label signlanguage
+			`	"Greetings, Captain <first>." The stranger signs. "My name is Rayn, and my colleague said you had a request from another faction?"`
+			label stridercontinue
+			choice
+				`	"The Hai are hoping to learn from someone."`
+				`	"The Hai need help defending their space."`
+			`	"So the Hai want to improve their military technology? I presume this is in response to their long-standing war against the Unfettered?"`
+			choice
+				`	"Yes, although they don't think of it as such."`
+				`	"It isn't a war, it is a defensive action."`
+			`	Rayn looks amused. "It does not matter what they call it, a war by any name is just as bloody. But that aside, how do they know about us to make such a request?"`
+			choice
+				`	"They asked if I knew anyone who had in-flight repair technology, and I said I knew a group of human researchers."`
+				`	"
+
+
 
 mission "Strider 3 (Remnant)"
 	landing
@@ -1930,7 +2006,7 @@ mission "Strider 3 (Remnant)"
 	passengers 3
 	blocked "The Hai are sending a delegation to <destination>, and will require 3 bunks for the trip."
 	to offer
-		has "strider: remnant"
+		has "strider: remnant 2 (Remnant)"
 	on offer
 		conversation
 			`You enter the spaceport and find the Hai delegation meant to travel to the Remnant to negotiate for the hull repair technology. The leader of the delegation introduces herself as Ambassador Yashili. "I heard that we will be traveling a great distance across the galaxy. May we have a safe journey."`
