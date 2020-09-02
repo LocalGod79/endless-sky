@@ -1888,7 +1888,7 @@ conversation "pond strider"
 	
 	label both
 	choice
-		`	"A group of humans in an area of space known as the Ember Waste have ships that are able to repair themselves."`
+		`	"I know a reclusive group of humans who have ships that can repair themselves."`
 			goto remnant
 		`	"There are a group of three alien species far from here known as the Coalition that have outfits able to repair a ship in flight."`
 			goto coalition
@@ -1993,16 +1993,20 @@ mission "Strider 2 (Remnant)"
 			`	Rayn looks amused. "It does not matter what they call it, a war by any name is just as bloody. But that aside, how do they know about us to make such a request?"`
 			choice
 				`	"They asked if I knew anyone who had in-flight repair technology, and I said I knew a group of human researchers."`
-				`	"
+				`	"They were looking for someone who had repair technology, and I said I could find someone."`
+			`	"So they do not actually know about us. That is good." Rayn looks thoughtful and closes his eyes for a moment, then continues. "Pick up the Hai diplomats, but do not tell them where you are going, and take them to these co-ordinates on Deadman's Cove, in the Almach system. It is a location in an uninhabited area where we will be able to talk. We will be waiting with something that might be able to help them - if they can meet our price."`
+	on complete
+		conversation
+			`Shortly after landing on <destination> you spot Ambassador Yashili's aide rushing across the tarmac to meet you. "Please tell me they agreed? They did, right?" You barely have the chance to nod before the aide continues on. "The Ambassador will be ready in just a moment. She will meet you in the starport shortly. Thank you!" And with that, the officious Hai scurries off back the way it came.`
 
 
 
 mission "Strider 3 (Remnant)"
-	landing
 	name "Contact the Remnant"
 	description "Transport Ambassador Yashili and her delegation to <destination> to attempt to obtain hull repair technology from the Remnant."
 	source "Hai-home"
-	destination "Aventine"
+	destination "Deadman's Cove"
+	infiltrating
 	passengers 3
 	blocked "The Hai are sending a delegation to <destination>, and will require 3 bunks for the trip."
 	to offer
@@ -2023,38 +2027,22 @@ mission "Strider 3 (Remnant)"
 		dialog `It appears that the delegation is bunked on escorts that have not arrived in this system yet. Take off and wait for them.`
 	on complete
 		conversation
-			`When you touch down on <planet> with the delegation, a few Remnant begin approaching the Hai. Just like when you first came here, they attempt to communicate with the Hai using sign language, followed by a monotone chant: "Do you comprehend the ancestral tongue?"`
-			`	"We do understand your human language," a member of the delegation responds.`
-			`	You notice that more Remnant are gathered around than when you first landed here, a few of which are brandishing weapons. They may be on edge seeing the Hai. "What is the meaning of bringing these aliens, outsider?" one of the Remnant asks you.`
-			choice
-				`	"They're in need of your help."`
-				`	"They come seeking technology."`
-			`	A Remnant with a blood testing device has already approached the Hai. "We kindly request that you identify yourself," he chants. Yashili looks to you.`
-			choice
-				`	"They just want to test your blood to make sure you aren't an Alpha."`
-				`	"Don't worry, it doesn't hurt."`
-			`	The three Hai have their blood tested one by one. Instead of beeping and flashing yellow like when you took the blood test, the device instead flashes orange. But, when Yashili's blood is tested, the device makes a screeching noise instead of a beep and flashes red, prompting the Remnant to raise their weapons to Yashili. "Alpha!" one of them yells.`
-			choice
-				`	"No, she's not an Alpha! Test her again!"`
-					goto again
-				`	(Jump in front of Yashili.)`
-			`	You leap in front of Yashili and spread your arms as to be a bigger target. "Why do you protect this Alpha, outsider?" one of the Remnant asks.`
-			`	"She's not an Alpha, she's a Hai! Your devices must just not recognize alien blood properly. Test her again."`
-			
-			label again
-			`	The Remnant hesitate for a moment, but agree to drop their weapons and test Yashili again with a different device. This time the light flashes orange, just like for the other two Hai. "We will need to add these blood samples to our database," a Remnant says. "It would be unfortunate in the future if we harm an innocent being for fear of them being an Alpha."`
-			`	The delegation looks shaken after that confrontation, but Yashili has kept her composure and begins speaking. "We come representing the Hai people, who live far from here. Some of our brothers and sisters have turned violent toward us, and have recently created a new ship that may cause us trouble. We have created a new ship of our own in retaliation, but we are still in need of technology capable of repairing the hull of a ship while in flight so that we may have an advantage. Captain <last> has told us that you obtain such technology, with ship hulls that repair themselves."`
+			`At the designated co-ordinates there is a small encampment set up, looking vaguelly reminiscent of desert traders from old movies. You note there are even a few camels tied near a water trough. When you touch down next to it, the delegation steps out with a confused look. "Captain, I thought you were taking us to where these people live?" Before you can answer, some Remnant approach. "Welcome to our encampment, representatives." Chant the Remnant. "Captain <first> brought us your missive, and we asked them to bring you to meet us here. Would you care to come inside?" They gesture towards the largest of the tents. While obviously surprised, Ambassador Yashili aquiesces and the Hai step inside. Three of the Remnant accompany them, and wave for you to follow. The remaining Remnant continue patrolling around the camp.`
+			`	The Remnant offer food and water to everyone before taking a seat on cushions on the ground. Looking around, Ambassador Yashili begins. "We come representing the Hai people, who live far from here. Some of our brothers and sisters have turned violent toward us, and have recently created a new ship that may cause us trouble. We have created a new ship of our own in retaliation, but we are still in need of technology capable of repairing the hull of a ship while in flight so that we may have an advantage. Captain <last> has told us that you have such technology, with ship hulls that repair themselves."`
 			`	"This is true that our ships self repair," one of the Remnant responds. "But this is not technology that we are able to share. This property is intrinsic to the metals that we build our ships with, metals which are in low supply." Yashili looks concerned with this development; perhaps this journey was a worthless one.`
 			choice
 				`	"So is there no way that you can help them?"`
 				`	"Alright, let's return to Hai-home."`
-			`	"Wait. We may still have something that can help," a different Remnant chants, stepping out from the crowd. "For many decades, we have been fighting and plundering from Korath raiders from the Core. Their ships contain outfits capable of hull repair through the use of small robots. We have been unable to reproduce these robots with ease, but we may be able to provide for you our research and a number of samples that you may use to reproduce this technology."`
+			`	"Wait. We may still have something that can help," a different Remnant chants. "For many decades, we have been fighting and plundering from Korath raiders from the Core. Their ships contain outfits capable of hull repair through the use of small robots. We have been unable to reproduce these robots with ease, but we may be able to provide for you our research and a number of samples that you may use to reproduce this technology."`
 			`	"We too have encountered these Korath," Yashili says in response. "Although, we had not taken their technology. This may be of great use to us."`
+			`	"We would like to ask something in trade, however. We would like a copy of your astronomical records. The history of the galaxy itself is a mystery to us, and we would like to learn more about it."`
+			`	Ambassador Yashili looks thoughtful, then nods. "Historical astronomical data is scientifically valuable, as is learning how to repair our ships in flight. This seems a fair trade.` She nods to one of her aides who begins tapping out commands on a small computer. "We should be able to have the data for you shortly. My assistant will need to use Captain <first>'s communication's array, but 
 			`	The Remnant agree to meet in the spaceport with a copy of the research done on the Korath technology, as well as a collection of the small robots for them to study.`
 
 mission "Strider 3 (Remnant)"
 	name "Technology Obtained"
 	description "The delegation has successfully obtained hull repair technology from the Remnant. Return to <destination> so that the Hai can begin developing this technology for their new ship."
+	landing
 	source "Aventine"
 	destination "Hai-home"
 	passengers 3
