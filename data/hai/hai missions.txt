@@ -2036,14 +2036,16 @@ mission "Strider 3 (Remnant)"
 			`	"Wait. We may still have something that can help," a different Remnant chants. "For many decades, we have been fighting and plundering from Korath raiders from the Core. Their ships contain outfits capable of hull repair through the use of small robots. We have been unable to reproduce these robots with ease, but we may be able to provide for you our research and a number of samples that you may use to reproduce this technology."`
 			`	"We too have encountered these Korath," Yashili says in response. "Although, we had not taken their technology. This may be of great use to us."`
 			`	"We would like to ask something in trade, however. We would like a copy of your astronomical records. The history of the galaxy itself is a mystery to us, and we would like to learn more about it."`
-			`	Ambassador Yashili looks thoughtful, then nods. "Historical astronomical data is scientifically valuable, as is learning how to repair our ships in flight. This seems a fair trade.` She nods to one of her aides who begins tapping out commands on a small computer. "We should be able to have the data for you shortly. My assistant will need to use Captain <first>'s communication's array, but 
-			`	The Remnant agree to meet in the spaceport with a copy of the research done on the Korath technology, as well as a collection of the small robots for them to study.`
+			`	Ambassador Yashili looks thoughtful, then nods. "Historical astronomical data is scientifically valuable, as is learning how to repair our ships in flight. This seems a fair trade." She nods to one of her aides who begins tapping out commands on a small computer. "We should be able to have the data for you shortly. My assistant will need to use Captain <first>'s ftl communication system, but it shouldn't be long."`
+			`	As the assistant scurries out, Ambassador Yashili and the Remnant settle into diplomatic small talk. The conversational dance between a group of professional diplomats and a secretive group that are currently playing the role of nomadic desert traders is an odd one.`
 
-mission "Strider 3 (Remnant)"
+
+
+mission "Strider 4 (Remnant)"
 	name "Technology Obtained"
 	description "The delegation has successfully obtained hull repair technology from the Remnant. Return to <destination> so that the Hai can begin developing this technology for their new ship."
 	landing
-	source "Aventine"
+	source "Deadman's Cove"
 	destination "Hai-home"
 	passengers 3
 	cargo "repair technology" 12
@@ -2052,8 +2054,12 @@ mission "Strider 3 (Remnant)"
 		has "Strider 3 (Remnant): done"
 	on offer
 		conversation
-			`The Remnant hand the Hai a data chip containing a copy of all the information that they have on the Korath technology and load a crate full of samples of the Korath outfits onto your ship. Yashili thanks the Remnant for their generosity and boards your ship, ready to return to <destination>.`
+			`An hour later the ambassador's assistant returns with a large data drive, and hands it to Ambassador Yashili. The Remnant pull out a datachip of their own, and the two groups formally exchange the two drives. In response to an unseen signal, another Remnant pulls back one side of the tent and a team carries in a segment from a systems core with several of the small robots. "There is more of these waiting outside for you, but here is a sample for you to inspect. Using the instructions we have provided, you should have no problem making use of this technology." They poke at the console, and the robots promptly spring to life and assembled a small pile of parts into a model ship.`
+			`	"Thank you for doing business with us." Says Ambassador Yashili. "You have a friend in the Hai." She bows, and then leads the delegation out of the tent to back to your ship. The Remnant return the bow with fluid grace, and quickly shoulder the Korath equipment. They quickly load everything onto the <ship> and you set out to return to <destination>.`
+			`	A final glance at your exterior cameras shows the Remnant have already almost finished packing up their encampment onto camels, with a few of them carrying equipment that looks very much like portable scanning equipment. As one tent comes down, it reveals a anti-aircraft artillery canon installed on a sled. Despite the rustic appearance they portrayed, the Remnant certainly took their security seriously. There is still no ship visible, but you suspect that a starling or gull is undoubtably hiding nearby.`
 				accept
+
+
 
 mission "Strider 2 (Coalition)"
 	landing
@@ -2108,6 +2114,8 @@ mission "Strider 2 (Coalition)"
 			`	"Much involved in projecting our repair modules, House Chamgar is," the same Arach says. "Contact their representatives in this ring, we will."`
 			`	The Heliarch ask that the Hai prepare to describe their ships to the members of the great Arach House, who will then prepare a copy of the blueprints for the repair modules. You and the Hai delegation decide to meet up again in the spaceport in a few hours.`
 
+
+
 mission "Strider 3 (Coalition)"
 	name "Technology Obtained"
 	description "The delegation has successfully obtained hull repair technology from the Coalition. Return to <destination> so that the Hai can begin developing this technology for their new ship."
@@ -2122,6 +2130,8 @@ mission "Strider 3 (Coalition)"
 		conversation
 			`The Hai are waiting for you, and confirm the Heliarchs handed them a data chip containing schematics for the hull repair modules and their hull-walking robots, as well as a and load a crate with two small hull repair modules onto your ship for the Hai. Yashili thanks the Coalition for their generosity and boards your ship, ready to return to <destination>.`
 				accept
+
+
 
 event "pond strider mass production"
 	shipyard "Hai Advanced"
@@ -2247,18 +2257,22 @@ event "pond strider mass production"
 			"Pond Strider" 3
 			"Flea" 24
 
+
+
 mission "Strider 4"
 	landing
 	source "Hai-home"
 	to offer
 		or
-			has "Strider 3 (Remnant): done"
+			has "Strider 4 (Remnant): done"
 			has "Strider 3 (Coalition): done"
 	on offer
 		event "pond strider mass production" 30
 		conversation
 			``
 				decline
+
+
 
 mission "Strider notification"
 	invisible
