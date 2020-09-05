@@ -2054,10 +2054,14 @@ mission "Strider 4 (Remnant)"
 		has "Strider 3 (Remnant): done"
 	on offer
 		conversation
-			`An hour later the ambassador's assistant returns with a large data drive, and hands it to Ambassador Yashili. The Remnant pull out a datachip of their own, and the two groups formally exchange the two drives. In response to an unseen signal, another Remnant pulls back one side of the tent and a team carries in a segment from a systems core with several of the small robots. "There is more of these waiting outside for you, but here is a sample for you to inspect. Using the instructions we have provided, you should have no problem making use of this technology." They poke at the console, and the robots promptly spring to life and assembled a small pile of parts into a model ship.`
+			`An hour later the ambassador's assistant returns with a large data drive, and hands it to Ambassador Yashili. The Remnant pull out a datachip of their own, and the two groups formally exchange the data. In response to an unseen signal, another Remnant pulls back one side of the tent and a team carries in a segment from a systems core with several of the small robots. "There is more of these waiting outside for you, but here is a sample for you to inspect. Using the instructions we have provided, you should have no problem making use of this technology." They poke at the console, and the robots promptly spring to life and assembled a small pile of parts into a model ship.`
 			`	"Thank you for doing business with us." Says Ambassador Yashili. "You have a friend in the Hai." She bows, and then leads the delegation out of the tent to back to your ship. The Remnant return the bow with fluid grace, and quickly shoulder the Korath equipment. They quickly load everything onto the <ship> and you set out to return to <destination>.`
-			`	A final glance at your exterior cameras shows the Remnant have already almost finished packing up their encampment onto camels, with a few of them carrying equipment that looks very much like portable scanning equipment. As one tent comes down, it reveals a anti-aircraft artillery canon installed on a sled. Despite the rustic appearance they portrayed, the Remnant certainly took their security seriously. There is still no ship visible, but you suspect that a starling or gull is undoubtably hiding nearby.`
+			`	As you take off, a final glance at your exterior cameras shows the Remnant have already almost finished packing up their encampment onto camels, with a few of them carrying equipment that looks very much like portable scanning equipment. As one tent comes down, it reveals a anti-aircraft artillery canon installed on a sled. Despite the rustic appearance they portrayed, the Remnant certainly took their security seriously. There is still no ship visible, but you suspect that a starling or gull is undoubtably hiding nearby.`
 				accept
+	on complete
+		conversation
+			`Back on <destination> Ambassador Yashili hands off the data to Torsa. He quickly scans through the data getting more and more excited. "Yes, this will do very nicely. Who would have thought the solution was right under our noses this whole time!" He flips through several more screens. "Yes, yes, I can do this. These are both detailed and informative. Very helpful..." He trails off as he excitedly paws through the documentation.`
+
 
 
 
@@ -2259,7 +2263,7 @@ event "pond strider mass production"
 
 
 
-mission "Strider 4"
+mission "Strider 5"
 	landing
 	source "Hai-home"
 	to offer
